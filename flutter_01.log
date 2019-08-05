@@ -1,0 +1,148 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter packages get
+
+## exception
+
+YamlException: Error on line 69, column 1: Expected ':'.
+   ╷
+69 │ # For information on the generic Dart part of this file, see the
+   │ ^
+   ╵
+
+```
+#0      Scanner._staleSimpleKeys (package:yaml/src/scanner.dart:491:9)
+#1      Scanner._fetchMoreTokens (package:yaml/src/scanner.dart:325:9)
+#2      Scanner.peek (package:yaml/src/scanner.dart:317:27)
+#3      Parser._parseBlockMappingKey (package:yaml/src/parser.dart:411:26)
+#4      Parser._stateMachine (package:yaml/src/parser.dart:86:16)
+#5      Parser.parse (package:yaml/src/parser.dart:47:19)
+#6      Loader._loadMapping (package:yaml/src/loader.dart:169:23)
+#7      Loader._loadNode (package:yaml/src/loader.dart:86:16)
+#8      Loader._loadMapping (package:yaml/src/loader.dart:163:19)
+#9      Loader._loadNode (package:yaml/src/loader.dart:86:16)
+#10     Loader._loadMapping (package:yaml/src/loader.dart:163:19)
+#11     Loader._loadNode (package:yaml/src/loader.dart:86:16)
+#12     Loader._loadDocument (package:yaml/src/loader.dart:62:20)
+#13     Loader.load (package:yaml/src/loader.dart:54:20)
+#14     loadYamlDocument (package:yaml/yaml.dart:51:25)
+#15     loadYamlNode (package:yaml/yaml.dart:42:5)
+#16     loadYaml (package:yaml/yaml.dart:34:5)
+#17     FlutterManifest.createFromString (package:flutter_tools/src/flutter_manifest.dart:38:28)
+#18     FlutterManifest.createFromPath (package:flutter_tools/src/flutter_manifest.dart:32:12)
+#19     FlutterProject._readManifest (package:flutter_tools/src/project.dart:167:54)
+#20     FlutterProject.fromDirectory (package:flutter_tools/src/project.dart:45:38)
+#21     FlutterProject.fromPath (package:flutter_tools/src/project.dart:60:50)
+#22     PackagesGetCommand.usageValues (package:flutter_tools/src/commands/packages.dart:80:55)
+<asynchronous suspension>
+#23     FlutterCommand._sendUsage (package:flutter_tools/src/runner/flutter_command.dart:411:58)
+<asynchronous suspension>
+#24     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:392:17)
+<asynchronous suspension>
+#25     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:29)
+<asynchronous suspension>
+#26     _rootRun (dart:async/zone.dart:1124:13)
+#27     _CustomZone.run (dart:async/zone.dart:1021:19)
+#28     _runZoned (dart:async/zone.dart:1516:10)
+#29     runZoned (dart:async/zone.dart:1463:12)
+#30     AppContext.run (package:flutter_tools/src/base/context.dart:152:18)
+<asynchronous suspension>
+#31     FlutterCommand.run (package:flutter_tools/src/runner/flutter_command.dart:375:20)
+#32     CommandRunner.runCommand (package:args/command_runner.dart:197:27)
+<asynchronous suspension>
+#33     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:396:21)
+<asynchronous suspension>
+#34     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:29)
+<asynchronous suspension>
+#35     _rootRun (dart:async/zone.dart:1124:13)
+#36     _CustomZone.run (dart:async/zone.dart:1021:19)
+#37     _runZoned (dart:async/zone.dart:1516:10)
+#38     runZoned (dart:async/zone.dart:1463:12)
+#39     AppContext.run (package:flutter_tools/src/base/context.dart:152:18)
+<asynchronous suspension>
+#40     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:356:19)
+<asynchronous suspension>
+#41     CommandRunner.run.<anonymous closure> (package:args/command_runner.dart:112:25)
+#42     new Future.sync (dart:async/future.dart:224:31)
+#43     CommandRunner.run (package:args/command_runner.dart:112:14)
+#44     FlutterCommandRunner.run (package:flutter_tools/src/runner/flutter_command_runner.dart:242:18)
+#45     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:22)
+<asynchronous suspension>
+#46     _rootRun (dart:async/zone.dart:1124:13)
+#47     _CustomZone.run (dart:async/zone.dart:1021:19)
+#48     _runZoned (dart:async/zone.dart:1516:10)
+#49     runZoned (dart:async/zone.dart:1500:12)
+#50     run.<anonymous closure> (package:flutter_tools/runner.dart:60:18)
+<asynchronous suspension>
+#51     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:29)
+<asynchronous suspension>
+#52     _rootRun (dart:async/zone.dart:1124:13)
+#53     _CustomZone.run (dart:async/zone.dart:1021:19)
+#54     _runZoned (dart:async/zone.dart:1516:10)
+#55     runZoned (dart:async/zone.dart:1463:12)
+#56     AppContext.run (package:flutter_tools/src/base/context.dart:152:18)
+<asynchronous suspension>
+#57     runInContext (package:flutter_tools/src/context_runner.dart:56:24)
+<asynchronous suspension>
+#58     run (package:flutter_tools/runner.dart:51:10)
+#59     main (package:flutter_tools/executable.dart:62:9)
+<asynchronous suspension>
+#60     main (file:///Users/yuan/flutter/packages/flutter_tools/bin/flutter_tools.dart:8:3)
+#61     _startIsolate.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:299:32)
+#62     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:172:12)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, v1.7.8+hotfix.3, on Mac OS X 10.14.4 18E226, locale zh-Hans-CN)
+    • Flutter version 1.7.8+hotfix.3 at /Users/yuan/flutter
+    • Framework revision b712a172f9 (3 weeks ago), 2019-07-09 13:14:38 -0700
+    • Engine revision 54ad777fd2
+    • Dart version 2.4.0
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+    • Android SDK at /Users/yuan/Library/Android/sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-28, build-tools 28.0.3
+    • ANDROID_HOME = /Users/yuan/Library/Android/sdk
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1136-b06)
+    • All Android licenses accepted.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 10.3)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 10.3, Build version 10G8
+    • CocoaPods version 1.7.4
+
+[!] iOS tools - develop for iOS devices
+    ✗ Verify that all connected devices have been paired with this computer in Xcode.
+      If all devices have been paired, libimobiledevice and ideviceinstaller may require updating.
+      To update with Brew, run:
+        brew update
+        brew uninstall --ignore-dependencies libimobiledevice
+        brew uninstall --ignore-dependencies usbmuxd
+        brew install --HEAD usbmuxd
+        brew unlink usbmuxd
+        brew link usbmuxd
+        brew install --HEAD libimobiledevice
+        brew install ideviceinstaller
+    • ios-deploy 1.9.4
+
+[✓] Android Studio (version 3.2)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin version 31.3.1
+    • Dart plugin version 181.5656
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1136-b06)
+
+[✓] VS Code (version 1.36.1)
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Flutter extension version 3.2.0
+
+[✓] Connected device (1 available)
+    • iPhone X • 6940B58B-DFBC-4C13-B2B2-AE524040CD54 • ios • com.apple.CoreSimulator.SimRuntime.iOS-12-4 (simulator)
+
+! Doctor found issues in 1 category.
+```

@@ -1,0 +1,4 @@
+enum IconType{
+  stroke,
+  fill,
+}
