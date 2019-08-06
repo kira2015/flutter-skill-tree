@@ -27,7 +27,7 @@ class MyHomePage extends StatelessWidget {
     {"数据存取": FilePathHome()}: Icons.insert_drive_file,
     {"相册": PhotosHome()}: Icons.photo,
     {"录音": HomeAudioPage()}: Icons.mic,
-    {"定位": LocationHome()}: Icons.mic,
+    {"定位": LocationHome()}: Icons.location_on,
     {"自适应文本": AutoTextHome()}: Icons.text_fields,
     {"拖拽控件": MoveWidgetHome()}: Icons.compare_arrows,
     {"下载": DownloadHome()}: Icons.cloud_download,
