@@ -7,8 +7,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:video_player/video_player.dart';
 
 class CameraExampleHome extends StatefulWidget {
-  List<CameraDescription> cameras;
-  CameraExampleHome(this.cameras);
+  CameraExampleHome();
   @override
   _CameraExampleHomeState createState() {
     return _CameraExampleHomeState();
@@ -23,11 +22,18 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
   VideoPlayerController videoController;
   VoidCallback videoPlayerListener;
   bool enableAudio = true;
+  List<CameraDescription> cameras;
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
+    availableCameras().then((cameras){
+      this.cameras = cameras;
+      setState(() {
+
+      });
+      WidgetsBinding.instance.addObserver(this);
+    });
   }
 
   @override
@@ -214,10 +220,10 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
   Widget _cameraTogglesRowWidget() {
     final List<Widget> toggles = <Widget>[];
 
-    if (widget.cameras.isEmpty) {
+    if (cameras == null) {
       return const Text('No camera found');
     } else {
-      for (CameraDescription cameraDescription in widget.cameras) {
+      for (CameraDescription cameraDescription in cameras) {
         toggles.add(
           SizedBox(
             width: 90.0,
