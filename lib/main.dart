@@ -1,5 +1,6 @@
 import 'package:amap_location/amap_location.dart';
 import 'package:flutter/material.dart';
+import 'package:skill_tree/splash_page.dart';
 
 import 'home_page.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: SplashPage(),
     );
   }
 }
