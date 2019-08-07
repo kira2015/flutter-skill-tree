@@ -25,7 +25,7 @@ ios:
     defaultConfig {
         .....
         manifestPlaceholders = [
-                AMAP_KEY : "aa9f0cf8574400f2af0078392c556e25", /// 高德地图key
+                AMAP_KEY : "60600f655cb28db0a16580efb34a75d3", /// 高德地图key
         ]
 
     }
