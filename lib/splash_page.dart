@@ -8,7 +8,7 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-
+      color: Colors.white,
       child: FlareActor(
         "flrs/splash_anim.flr",
         fit: BoxFit.scaleDown,

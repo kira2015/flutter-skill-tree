@@ -42,8 +42,8 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final horizonCardNum = size.width ~/ 100;
-    final space = 20.0;
+    final horizonCardNum = size.width ~/ 120;
+    final space = 10.0;
     final cardSize = size.width / horizonCardNum - space;
 
     return Scaffold(
@@ -71,6 +71,7 @@ class MyHomePage extends StatelessWidget {
                 width: cardSize,
                 height: cardSize,
                 child: InkWell(
+                  borderRadius: BorderRadius.all(Radius.circular(cardSize / 5)),
                   onTap: () => pushNewPage(page, context),
                   child: Card(
                     shape: RoundedRectangleBorder(
