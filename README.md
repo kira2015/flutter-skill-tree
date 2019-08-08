@@ -12,6 +12,11 @@
 
 这个项目，都将会是你最好的学习材料
 
+![image](https://user-images.githubusercontent.com/30992818/62682695-5c65ab80-b9ef-11e9-9cad-b0f22332ec00.gif)
+
+    ps:上面这个开场动画来自于2dimension
+
+
 > 目前项目包含的主要内容是各种需要与原生交互的插件使用。后续会继续完善此类Demo，同时也会插入一些纯Dart实现的Demo
 
 
