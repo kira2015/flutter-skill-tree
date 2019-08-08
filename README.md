@@ -71,7 +71,7 @@
 
 ## apk下载地址
 
-![image](https://user-images.githubusercontent.com/30992818/62685724-cbde9980-b9f5-11e9-88de-7dd7ebb9f8fb.png)
+![image](https://user-images.githubusercontent.com/30992818/62687290-1281c300-b9f9-11e9-9310-308e7c3596fe.png)
 
 
 
