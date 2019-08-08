@@ -1,16 +1,21 @@
-# share_test
+# 分享功能
 
-A new Flutter project.
+使用非常简单，无需在两端配置
 
-## Getting Started
+## 依赖
 
-This project is a starting point for a Flutter application.
+```
+dependencies:
+  share: ^0.6.2+1
+```
+## 导入
 
-A few resources to get you started if this is your first Flutter project:
+```
+import 'package:share/share.dart';
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## 使用
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```
+Share.share('check out my website https://example.com');
+```
